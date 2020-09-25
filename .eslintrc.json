@@ -40,7 +40,8 @@
       {
         "ts": "never"
       }
-    ]
+    ],
+    "semi": ["error", "never"]
   },
   "settings": {
     "import/resolver": {

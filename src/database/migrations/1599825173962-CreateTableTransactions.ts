@@ -3,7 +3,7 @@ import {
   QueryRunner,
   Table,
   TableForeignKey,
-} from 'typeorm';
+} from 'typeorm'
 
 export default class CreateTableTransactions1599825173962
   implements MigrationInterface {
@@ -48,7 +48,7 @@ export default class CreateTableTransactions1599825173962
           },
         ],
       }),
-    );
+    )
 
     await queryRunner.createForeignKey(
       'transactions',
@@ -60,15 +60,15 @@ export default class CreateTableTransactions1599825173962
         onUpdate: 'CASCADE',
         onDelete: 'SET NULL',
       }),
-    );
+    )
   }
 
   public async down(queryRunner: QueryRunner): Promise<void> {
     await queryRunner.dropForeignKey(
       'transactions',
       'transactions_categories_id_fk',
-    );
+    )
 
-    await queryRunner.dropTable('transactions');
+    await queryRunner.dropTable('transactions')
   }
 }
